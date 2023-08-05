@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechEduca!: Transformando Mentes com a Robótica!</title>
+    <title>Blog da TechEduca!</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/carousel.css">
 </head>
 <body>
     <header>
@@ -23,40 +22,35 @@
     </header>
 
     <main>
-  
-        <div class="carousel">
-            <a href="artigo1.html" target="_blank"><img src="assets/images/Thumb_Post1.png" alt="Aprenda a Ligar um LED"></a>
-            <a href="artigo2.html" target="_blank"><img src="assets/images/Thumb_Post2.png" alt="Construa o seu próprio Semáforo!"></a>
-            <div class="arrow arrow-left" onclick="changeSlide(-1)" aria-label="Slide Anterior">
-                &#8249;
-            </div>
-            <div class="arrow arrow-right" onclick="changeSlide(1)" aria-label="Próximo Slide">
-                &#8250;
-            </div>
-        </div>
-        <div class="scroll-arrow" onclick="scrollDown()" aria-label="Role para baixo">
-            &#8964;
-        </div>
-
-        <section class="banners">
-            <a href="https://goo.gl/maps/8Ly2TPiVbw26Z7YP6" target="_blank">
-                <img src="assets/images/banner-salete.png" alt="Escola Estadual Nossa Senhora da Salete">
-            </a>
-            <a href="https://www.parana.pr.gov.br/" target="_blank">
-                <img src="assets/images/banner-parana.png" alt="Governo do Estado do Paraná">
-            </a>
-            <a href="https://www.sistemafaep.org.br/agrinho/" target="_blank">
-                <img src="assets/images/banner-agrinho.png" alt="Concurso Agrinho 2023">
-            </a>
+        <section class="articles">
+            <article>
+                <div class="thumbnail">
+                    <img src="assets/images/Thumb_Post2.png" alt="#pracegover: Construa o seu próprio semáforo utilizando Arduino">
+                </div>
+                <div class="article-info">
+                    <h2><a href="artigo2.html" class="article-link2">Construa o seu próprio semáforo utilizando Arduino</a></h2>
+                    <p>04/08/2023 - Neste tutorial, vamos aprender a criar um semáforo em Arduino utilizando LEDs nas cores vermelho, amarelo e verde ...</p>
+                </div>
+            </article>
+            <article>
+                <div class="thumbnail">
+                    <img src="assets/images/Thumb_Post1.png" alt="#pracegover: Aprenda a Ligar um LED">
+                </div>
+                <div class="article-info">
+                    <h2><a href="artigo1.html" class="article-link1">Aprenda a Ligar um LED</a></h2>
+                    <p>03/08/2023 - Aprenda a ligar um LED utilizando uma bateria 9V ou utilizando um Arduino ...</p>
+                </div>
+            </article>
         </section>
 
         <div class="parallax-image"></div>
-
+                
         <div class="accessibility-buttons">
             <button class="font-size-button" onclick="increaseFontSize()">+A</button>
             <button class="font-size-button" onclick="decreaseFontSize()">-a</button>
             <button class="contrast-button" onclick="toggleContrast()"> ◐</button>
         </div>
+
     </main>
 
     <footer>
@@ -68,8 +62,6 @@
     <div class="scrollbar">
         <div class="thumb"></div>
     </div>
-
-    <script src="assets/js/carousel.js"></script>
 
     <script src="assets/js/script.js"></script>
 

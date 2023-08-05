@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEduca!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TechEduca!</div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()" tabindex="0" role="button" aria-label="Menu">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="index.html" tabindex="1">Página Inicial</a></li>
+                    <li><a href="blog.html" tabindex="2">Blog</a></li>
+                    <li><a href="quem_somos.html" tabindex="3">Quem Somos?</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="article-content">
+            <img class="featured-image" src="assets/images/Thumb_Post2.png" alt="#pracegover: Construa o seu próprio semáforo utilizando Arduino">
+            <h1>Construa o seu próprio semáforo utilizando Arduino</h1>
+            
+            <p>Neste tutorial, vamos aprender a criar um semáforo em Arduino utilizando LEDs nas cores vermelho, amarelo e verde. Além disso, cada LED será conectado a um resistor de 220 ohms para garantir o correto funcionamento do circuito. Vamos fornecer um código para ligar os LEDs de forma sequencial, criando assim um semáforo funcional!</p>
+            
+            <p><strong>Materiais necessários:</strong> 01 Arduino Uno R3; 01 LED vermelho; 01 LED amarelo; 01 LED verde; Resistores de 220 ohms (3 unidades); 01 Protoboard; Jumpers</p>
+            
+            <h2>Passo 1: Conexão dos LEDs e Resistores</h2>
+            
+            <img class="imagePost" src="assets/images/tutorial_2/0-semaforo.png" alt="#pracegover: Semáforo em Arduino">
+
+            <p>Para começar, conecte o LED vermelho na porta 6 do Arduino, o LED amarelo na porta 5 e o LED verde na porta 4. Certifique-se de conectar o terminal positivo (anodo) de cada LED ao pino correspondente do Arduino e o terminal negativo (catodo) ao resistor de 220 ohms. Em seguida, ligue o outro terminal do resistor ao GND do Arduino. Repita esse processo para os três LEDs.</p>
+
+            <h2>Passo 2: Código do Semáforo</h2>
+
+            <pre>
+                <code>
+                    // Definindo os pinos dos LEDs
+                    int vermelhoPin = 6;
+                    int amareloPin = 5;
+                    int verdePin = 4;
+
+                    void setup() {
+                    // Inicialização dos pinos como saída
+                    pinMode(vermelhoPin, OUTPUT);
+                    pinMode(amareloPin, OUTPUT);
+                    pinMode(verdePin, OUTPUT);
+                    }
+
+                    void loop() {
+                    // Vermelho aceso, os demais apagados (estado inicial)
+                    digitalWrite(vermelhoPin, HIGH);
+                    digitalWrite(amareloPin, LOW);
+                    digitalWrite(verdePin, LOW);
+                    delay(2000); // Aguarda 2 segundos
+
+                    // Vermelho apagado, amarelo aceso, os demais apagados
+                    digitalWrite(vermelhoPin, LOW);
+                    digitalWrite(amareloPin, HIGH);
+                    digitalWrite(verdePin, LOW);
+                    delay(1000); // Aguarda 1 segundo
+
+                    // Amarelo apagado, verde aceso, os demais apagados
+                    digitalWrite(vermelhoPin, LOW);
+                    digitalWrite(amareloPin, LOW);
+                    digitalWrite(verdePin, HIGH);
+                    delay(2000); // Aguarda 2 segundos
+                    }
+                </code>
+            </pre>
+
+            <h2>Passo 3: Upload do Código</h2>
+
+            <p>Com o código acima pronto, conecte o Arduino ao computador utilizando um cabo USB e faça o upload do programa para a placa.</p>
+
+            <h2>Passo 4: Testando o Semáforo</h2>
+
+            <p>Agora que o código foi carregado com sucesso no Arduino, você deve observar o funcionamento do semáforo em sequência: vermelho, amarelo e verde, com os respectivos tempos de aceso configurados no código.</p>
+
+            <p>Parabéns! Você criou um semáforo funcional utilizando Arduino!</p>
+
+        </section>
+
+        <div class="parallax-image"></div>
+
+        <div class="accessibility-buttons">
+            <button class="font-size-button" onclick="increaseFontSize()">+A</button>
+            <button class="font-size-button" onclick="decreaseFontSize()">-a</button>
+            <button class="contrast-button" onclick="toggleContrast()"> ◐</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido pela Equipe de Programação 2023 - Escola Estadual Nossa Senhora da Salete</p>
+        </div>
+    </footer>
+
+    <div class="scrollbar">
+        <div class="thumb"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

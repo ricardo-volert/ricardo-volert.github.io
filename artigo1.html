@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEduca!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TechEduca!</div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()" tabindex="0" role="button" aria-label="Menu">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="index.html" tabindex="1">Página Inicial</a></li>
+                    <li><a href="blog.html" tabindex="2">Blog</a></li>
+                    <li><a href="quem_somos.html" tabindex="3">Quem Somos?</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="article-content">
+            <img class="featured-image" src="assets/images/Thumb_Post1.png" alt="#pracegover: Aprenda a Ligar um LED">
+            <h1>Aprenda a Ligar um LED</h1>
+            
+            <h2>Usando uma protoboard e uma bateria de 9V</h2>
+            <img class="imagePost" src="assets/images/tutorial_1/0-9v.png" alt="#pracegover: Aprenda a Ligar um LED utilizando uma bateria de 9V">
+            
+            <p>Para começar, você precisará dos seguintes materiais: um LED vermelho, um resistor de 220 ohm, uma protoboard e uma bateria de 9V. Primeiro, conecte o terminal positivo da bateria à protoboard e o terminal negativo também. Agora, pegue o LED e identifique o terminal mais longo, que é o positivo (ânodo), e o terminal mais curto, que é o negativo (cátodo). Conecte o terminal positivo do LED a um dos trilhos da protoboard usando um jumper. Em seguida, conecte o resistor de 220 ohm ao mesmo trilho. Agora, conecte o terminal negativo do LED ao outro trilho da protoboard usando outro jumper. Por fim, conecte a extremidade livre do resistor ao mesmo trilho do terminal negativo do LED. Pronto! O LED deve acender assim que a bateria for conectada.</p>
+            
+            <h2>Usando um Arduino Uno R3</h2>
+            
+            <img class="imagePost" src="assets/images/tutorial_1/1-arduino.png" alt="#pracegover: Aprenda a Ligar um LED utilizando um Arduino">
+            
+            <p>Se você preferir usar um Arduino Uno R3 para ligar o LED, siga os seguintes passos: primeiro, conecte o Arduino ao seu computador usando um cabo USB. Em seguida, abra o software Arduino IDE no seu computador. Dentro do IDE, selecione a placa "Arduino Uno" e a porta correta do Arduino na seção "Ferramentas". Agora, vamos conectar o LED e o resistor ao Arduino. Conecte o terminal positivo do LED ao pino digital 7 do Arduino e o terminal negativo ao resistor de 220 ohm. Em seguida, conecte a outra extremidade do resistor ao terra (GND) do Arduino. Uma vez que tudo esteja conectado, faça o upload do seguinte código para o Arduino:</p>
+            
+            <pre>
+                <code>
+                    void setup() {
+                        pinMode(7, OUTPUT);
+                    }
+                    
+                    void loop() {
+                        digitalWrite(7, HIGH);
+                        delay(1000);
+                        digitalWrite(7, LOW);
+                        delay(1000);
+                    }
+                </code>
+            </pre>
+
+            <p>O código acima fará com que o LED pisque em intervalos de um segundo. Agora, clique no botão "Upload" no IDE para enviar o código para o Arduino. O LED começará a piscar de acordo com o código carregado. Parabéns, você conseguiu ligar o LED utilizando um Arduino Uno R3 e a porta digital 7!</p>
+
+            <p>Lembre-se de que a eletricidade pode ser perigosa, portanto, tenha cuidado ao lidar com componentes eletrônicos e certifique-se de desligar a energia sempre que for fazer conexões ou desconexões.</p>
+
+        </section>
+
+        <div class="parallax-image"></div>
+
+        <div class="accessibility-buttons">
+            <button class="font-size-button" onclick="increaseFontSize()">+A</button>
+            <button class="font-size-button" onclick="decreaseFontSize()">-a</button>
+            <button class="contrast-button" onclick="toggleContrast()"> ◐</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido pela Equipe de Programação 2023 - Escola Estadual Nossa Senhora da Salete</p>
+        </div>
+    </footer>
+
+    <div class="scrollbar">
+        <div class="thumb"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>

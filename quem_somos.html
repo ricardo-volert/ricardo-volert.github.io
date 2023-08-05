@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechEduca!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">TechEduca!</div>
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()" tabindex="0" role="button" aria-label="Menu">&#9776;</div>
+                <ul class="menu">
+                    <li><a href="index.html" tabindex="1">Página Inicial</a></li>
+                    <li><a href="blog.html" tabindex="2">Blog</a></li>
+                    <li><a href="quem_somos.html" tabindex="3">Quem Somos?</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <main>
+        <section class="about-us">
+            <h1>Quem Somos?</h1>
+
+            <p>Sejam bem-vindos à página TechEduca! da Equipe de Programação da <strong>Estadual Nossa Senhora da Salete</strong>, localizada no bairro Jardim Social em Curitiba-PR. Este projeto é o esforço de uma equipe que abraçou o desafio de demonstrar como a tecnologia pode ser uma poderosa ferramenta para criar impacto positivo na sociedade.</p>
+
+            <p>Acreditamos no potencial que tecnologia oferece para transformar positivamente a vida das pessoas e o meio ambiente. Acreditamos que a programação não se limita apenas a códigos e algoritmos, mas sim, criar soluções que impactem a sociedade de forma sustentável e inclusiva.</p>
+
+            <p>Agradecemos o apoio de todos os colegas que têm nos fornecido ideias para evoluir nosso projeto e aos membros da Equipe Pedagógica do "Salete" que nos incentivam nessa jornada!</p>
+
+            <h2>Conheça os membros que compõem essa equipe incrível:</h2>
+
+            <ul>
+                <li><strong>Gabriel Wellington Moreira</strong>: Determinado e criativo, Gabriel é apaixonado por novos desafios e soluções inovadoras. Seu olhar visionário traz uma perspectiva única para o grupo.</li>
+                <li><strong>Bernardo Soares</strong>: Com um talento natural para a lógica e a programação, Bernardo é incansável em sua busca por conhecimento e sempre está disposto a ajudar os colegas.</li>
+                <li><strong>Gabriel Lobo Sampaio</strong>: Com habilidades excepcionais de comunicação e trabalho em equipe, Gabriel é um verdadeiro líder e incentiva a todos a darem o melhor de si.</li>
+                <li><strong>Arthur Campos Orosco</strong>: Espírito empreendedor e criativo, Arthur é conhecido por suas ideias inovadoras e sua capacidade de pensar fora da caixa.</li>
+                <li><strong>Ricardo Cezar Volert (Professor Orientador)</strong>: Professor responsável pelas disciplinas de Física I (Robótica I) e Matemática II (Programação I) conforme o possível, tem apoiado o projeto desde seu esboço no papel, mas que agora tem evoluído constantemente e gerando habilidades em programação e desenvolvimento de sites aos membros da equipe.</li>
+            </ul>
+        </section>
+
+        <div class="parallax-image"></div>
+
+        <div class="accessibility-buttons">
+            <button class="font-size-button" onclick="increaseFontSize()">+A</button>
+            <button class="font-size-button" onclick="decreaseFontSize()">-a</button>
+            <button class="contrast-button" onclick="toggleContrast()"> ◐</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Desenvolvido pela Equipe de Programação 2023 - Escola Estadual Nossa Senhora da Salete</p>
+        </div>
+    </footer>
+
+    <div class="scrollbar">
+        <div class="thumb"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</body>
+</html>
+
